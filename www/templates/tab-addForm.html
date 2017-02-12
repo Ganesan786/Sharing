@@ -1,0 +1,71 @@
+<ion-view title="Talley">
+    <ion-nav-title>
+        <span class=''>Talley</span>
+        <div class='pullRight'>
+            <span class='iconBtnAlign mR-10'><a href='#/tab/dash'><i class='material-icons' >clear</i></a></span>
+            <span class='iconBtnAlign'><span ng-hide="$root.userForm.$invalid" class='tick-show-hide' ng-click='formSubmission()'><i class='material-icons'>done</i></span></span>
+        </div>
+    </ion-nav-title>
+  <ion-content>
+    <form name="$root.userForm" layout-padding>
+     
+
+      <div layout="row">
+        <div flex>
+        <md-input-container class="md-block" flex-gt-sm="">
+          <label>Name</label>
+          <input required="" name="name" ng-model="user.name">
+          <div ng-messages="userForm.name.$error" ng-if="!showHints">
+            <div ng-message="required">Name is required.</div>
+          </div>
+        </md-input-container>
+        </div>
+        <div flex="5" hide-xs="" hide-sm="">
+          <!-- Spacer //-->
+        </div>
+          <div flex>
+        <md-input-container class="md-block" flex-gt-sm="">
+          <label>Enter Amount</label>
+           <input required="" name="money" ng-model="user.money" type="number" step="0.01" min="0" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/">
+          <div ng-messages="userForm.money.$error" ng-if="!showHints">
+             <div ng-message="min">Your field value is lesser minimum value</div>
+             <div ng-message="required">Amount is required.</div>
+             <div ng-message="pattern">Amount should be postive and allow two decimal values </div>
+             <div ng-message="number">You did not enter a valid number</div>
+          </div>
+        </md-input-container>
+         </div>
+
+      </div>
+      <div layout="row">
+      <div flex>
+         <md-input-container class="md-block">
+            <label>Description</label>
+            <input md-maxlength="30" required md-no-asterisk name="description" ng-model="user.description">
+            <div ng-messages="userForm.description.$error">
+              <div ng-message="required">This is required.</div>
+              <div ng-message="md-maxlength">The description must be less than 30 characters long.</div>
+            </div>
+        </md-input-container>
+      </div>
+      </div>
+
+
+    <div layout="row">
+      <div flex>
+         <md-input-container class="md-block">
+        <h4 class='lbl-h4'>Standard date-picker</h4>
+        <md-datepicker name="dateField" required="" ng-model="user.myDate" md-placeholder="Enter date"></md-datepicker>
+          <div class="validation-messages" ng-messages="userForm.dateField.$error">
+              <div ng-message="valid">The entered value is not a date!</div>
+              <div ng-message="required">This date is required!</div>
+         </div>
+         </md-input-container>
+      </div>
+    </div>
+
+    </form>
+  </ion-content>
+</ion-view>
+
+ 

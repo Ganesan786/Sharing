@@ -1,0 +1,30 @@
+<ion-view view-title="Money Tally Calc">
+  <ion-content on-swipe-right="goBack()" on-swipe-left="goForward()" class="" scrollbar-y="true">
+    <ion-header-bar class="bar-stable">
+        <h1 class="title">Table Details</h1>
+    </ion-header-bar>
+    <ion-content>
+        <div class="row header embr">
+          <div class="col">Name</div>
+          <div class="col">Description</div>
+          <div class="col">Amount</div>
+          <div class="col">Date</div>
+          <!--div class="col">Action</div-->
+        </div>
+        <div class="row" ng-repeat="data in users">
+          <div class="col">{{data.name}}</div>
+          <div class="col">{{data.description}}</div>
+          <div class="col">{{data.money}}</div>
+          <div class="col">{{data.date}}</div>
+          <!--div class="col"><button class="button" ng-click="add($index)">Add/Edit</button></div-->
+        </div>
+        <div class="row mrg_0" ng-if="users.length == 0">
+          <div class="txt_cnt">No records found</div>
+        </div>
+    </ion-content>
+       <div class='floatingBtn'>
+          <a href="#/tab/addForm"><i class="material-icons plusBtn">add_circle</i></a>
+            <ion-nav-view name="tab-addForm"></ion-nav-view>
+       </div>  
+  </ion-content>
+</ion-view>

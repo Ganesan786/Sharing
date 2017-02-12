@@ -1,0 +1,23 @@
+<ion-view view-title="Talley">
+  <ion-content on-swipe-right="goBack()" on-swipe-left="goForward()">
+      <div class="row mrg_0" ng-if="lists.length == 0">
+          <div class="txt_cnt">No records found</div>
+      </div>
+      <div class="row mrg_0" ng-if="lists.length != 0">
+          <div class="padTB_5 row">
+             <div class='col-50 txt_right'><span class='sumRslt'>Total: Rs {{sumofresult}} /-</span></div>
+             <div class='col-50'><span class='sumRslt avgVal'>Average: Rs {{average}} /-</span></div>
+          </div>
+      </div>
+     <ion-list>
+        <ion-item ng-repeat="list in lists" ng-show="(list.result | filter:filterByGroup(group)).length">
+               <ion-list>
+                   <h1>{{list.name}}</h1>
+                   <ion-item ng-repeat="result in list.result" class='listBox'>
+                    <div class='row padTB_5'><span class='givenr col-40'>{{result.give}}</span><span class='dshArrw col-20 txt_center'>---></span><span class='mny col-40 txt_right'>Rs: {{result.money}} /-</span></div>
+                   </ion-item>
+                </ion-list>
+        </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
