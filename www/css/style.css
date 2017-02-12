@@ -38,7 +38,7 @@
     color: #f5a900;
 }
 .floatingBtn {
-    position: absolute;
+    position: fixed;
     bottom: 30px;
     right: 20px;
 }
@@ -125,5 +125,35 @@
 }
 .scroll {
     overflow: auto;
-    position:relative;
+    position: relative;
+}
+.float-button {
+
+opacity: 0.9;
+color: white;
+border-radius: 50%;
+/*border-radius:15% 0 0 0;*/
+width: 30px;
+padding: 25px;
+font-size: 40px;
+position: fixed;
+bottom: 15%; /* Adjust height */
+right: 5%; /* Adjust position */
+z-index: 1000;
+}
+ 
+.float-button .height_fix {
+  margin-top: 100%;
+  border: 1px solid red;
+}
+ 
+.float-button .content {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  margin-top: -20px;
+  color: white;
 }
