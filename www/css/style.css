@@ -38,7 +38,7 @@
     color: #f5a900;
 }
 .floatingBtn {
-    position: fixed;
+    position: absolute;
     bottom: 30px;
     right: 20px;
 }
@@ -123,6 +123,7 @@
     background: #11c1f3;
     color: #fff;
 }
-.hidden {
-    display: none;
+.scroll {
+    overflow: auto;
+    position:relative;
 }
