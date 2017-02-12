@@ -123,10 +123,7 @@
     background: #11c1f3;
     color: #fff;
 }
-.scroll {
-    overflow: auto;
-    position: relative;
-}
+
 .float-button {
 background-color:#f5a900;
 opacity: 0.9;
@@ -157,3 +154,4 @@ z-index: 1000;
   margin-top: -20px;
   color: white;
 }
+.overflow-scroll{overflow-y:auto;}
