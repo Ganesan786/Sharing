@@ -21,10 +21,18 @@
         <div class="row mrg_0" ng-if="users.length == 0">
           <div class="txt_cnt">No records found</div>
         </div>
-        <div class='floatingBtn'>
+        <!--<div class='floatingBtn'>
           <a href="#/tab/addForm"><i class="material-icons plusBtn">add_circle</i></a>
             <ion-nav-view name="tab-addForm"></ion-nav-view>
-       </div> 
+       </div>--> 
+        <div class="float-button">
+            <span class="height-fix">
+                <a href="#/tab/addForm" class="content">
+                    <i class="material-icons plusBtn">add_circle</i>
+                </a>
+              </span>
+             <ion-nav-view name="tab-addForm"></ion-nav-view>
+        </div>
     </ion-content>
         
   </ion-content>
