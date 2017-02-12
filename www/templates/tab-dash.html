@@ -6,7 +6,7 @@
     <ion-content>
         <div class="row header embr">
           <div class="col">Name</div>
-          <div class="col">Description</div>
+          <div class="col">Brief</div>
           <div class="col">Amount</div>
           <div class="col">Date</div>
           <!--div class="col">Action</div-->
@@ -21,10 +21,11 @@
         <div class="row mrg_0" ng-if="users.length == 0">
           <div class="txt_cnt">No records found</div>
         </div>
-    </ion-content>
-       <div class='floatingBtn'>
+        <div class='floatingBtn'>
           <a href="#/tab/addForm"><i class="material-icons plusBtn">add_circle</i></a>
             <ion-nav-view name="tab-addForm"></ion-nav-view>
-       </div>  
+       </div> 
+    </ion-content>
+        
   </ion-content>
 </ion-view>
